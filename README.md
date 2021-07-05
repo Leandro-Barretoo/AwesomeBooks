@@ -1,59 +1,44 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Awesome Books
 
-> One paragraph statement about the project.
+> A simple website that display books.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./app_photo.png)
 
-Additional description about the project and its features.
+You can add and remove books from the list.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- JavaScript
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://leandro-barretoo.github.io/AwesomeBooks/)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
 
 ### Setup
 
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+- Clone the repo `git clone git@github.com:Leandro-Barretoo/AwesomeBooks`
+- `cd` into the directory
+- checkout to the htmlstage branch `git chechout htmlstage`
+- open in your desired code editor
 
 ## Authors
 
-👤 **Author1**
+👤 **Leandro Barreto**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Leandro-Barretoo](https://github.com/Leandro-Barretoo)
+- LinkedIn: [Leandro Barreto](https://www.linkedin.com/in/leandroobarreto/)
 
 👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@luqmanmusah](https://github.com/luqmanmusah)
+- LinkedIn: [Luqman Musah](https://www.linkedin.com/in/luqman-musah/)
 
 ## 🤝 Contributing
 
@@ -67,9 +52,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- MDN Web Docs
 
 ## 📝 License
 
