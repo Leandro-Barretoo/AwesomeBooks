@@ -9,13 +9,24 @@ function adBook(events) {
     collection.push(book);
     document.querySelector('form').reset();
 
+    let mainList = document.getElementById('main-list');
+    let itemContainer = document.createElement('div');
+    mainList.appendChild(itemContainer);
     let listItem = document.createElement('p');
-    let itemInfo = document.createTextNode(book['title'] + "\n" + book['author']);
+    let itemInfo = document.createTextNode('Title: ' + book['title'] + ' | ' + 'Author: ' + book['author']);
     listItem.appendChild(itemInfo);
-    let container = document.getElementById('list');
-    container.appendChild(listItem);
+    itemContainer.appendChild(listItem);
+    let listBtn = document.createElement('button');
+    listBtn.innerText = 'Remove';
+    listBtn.addEventListener('click', function(event){
+      let button = event.target;
+      button.parentNode.parentNode.removeChild(button.parentNode);
+      let itemIndex = collection.indexOf(book);
+      collection.splice(itemIndex, 1);
+    });
+    itemContainer.appendChild(listBtn);
+
 }
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('sub').addEventListener('click', adBook)
 })
-
