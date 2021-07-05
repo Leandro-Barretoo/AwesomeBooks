@@ -1,11 +1,11 @@
-let collection = []
+let collection = [];
 
 function adBook(events) {
     events.preventDefault();
     let book = {
         title: document.getElementById('title').value,
         author: document.getElementById('author').value
-    }
+    };
     collection.push(book);
     document.querySelector('form').reset();
 
@@ -23,10 +23,16 @@ function adBook(events) {
       button.parentNode.parentNode.removeChild(button.parentNode);
       let itemIndex = collection.indexOf(book);
       collection.splice(itemIndex, 1);
+      saveLocal();
     });
     itemContainer.appendChild(listBtn);
-
-}
+    saveLocal();
+};
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('sub').addEventListener('click', adBook)
-})
+    document.getElementById('sub').addEventListener('click', adBook);
+});
+
+function saveLocal() {
+  let acceptableString = JSON.stringify(collection);
+  localStorage.setItem('myBookList', acceptableString);
+};
