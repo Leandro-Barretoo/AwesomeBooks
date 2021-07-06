@@ -1,15 +1,17 @@
+/* eslint-disable indent */
+
 const collection = [];
 
 function saveLocal() {
   const acceptableString = JSON.stringify(collection);
   localStorage.setItem('myBookList', acceptableString);
-};
+}
 
 function adBook(events) {
     events.preventDefault();
     const book = {
         title: document.getElementById('title').value,
-        author: document.getElementById('author').value
+        author: document.getElementById('author').value,
     };
     collection.push(book);
     document.querySelector('form').reset();
@@ -18,7 +20,7 @@ function adBook(events) {
     const itemContainer = document.createElement('div');
     mainList.appendChild(itemContainer);
     const listItem = document.createElement('p');
-    const itemInfo = document.createTextNode('Title: ' + book['title'] + ' | ' + 'Author: ' + book['author']);
+    const itemInfo = document.createTextNode('Title: ' + book.title + ' | ' + 'Author: ' + book.author);
     listItem.appendChild(itemInfo);
     itemContainer.appendChild(listItem);
     const listBtn = document.createElement('button');
@@ -32,7 +34,9 @@ function adBook(events) {
     });
     itemContainer.appendChild(listBtn);
     saveLocal();
-};
+}
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('sub').addEventListener('click', adBook);
 });
+
+/* eslint-enable indent */
