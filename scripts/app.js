@@ -35,7 +35,7 @@ function adBook(events) {
     itemContainer.appendChild(listBtn);
     saveLocal();
 }
-document.addEventListener('DOMContentLoaded',  () => {
+document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('sub').addEventListener('click', adBook);
 });
 
