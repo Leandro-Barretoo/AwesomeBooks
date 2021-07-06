@@ -1,6 +1,6 @@
 /* eslint-disable indent */
 
-const collection = JSON.parse(localStorage.getItem('myBookList'));
+const collection = JSON.parse(localStorage.getItem('myBookList')) || [];
 
 function saveLocal() {
   const acceptableString = JSON.stringify(collection);
@@ -38,8 +38,10 @@ function adBook(events) {
     document.querySelector('form').reset();
     addItem(book);
 }
+
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('sub').addEventListener('click', adBook);
     collection.forEach(addItem);
 });
+
 /* eslint-enable indent */
