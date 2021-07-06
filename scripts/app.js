@@ -1,27 +1,11 @@
 /* eslint-disable indent */
 
-let collection = JSON.parse(localStorage.getItem('myBookList'));
+const collection = JSON.parse(localStorage.getItem('myBookList'));
 
 function saveLocal() {
   const acceptableString = JSON.stringify(collection);
   localStorage.setItem('myBookList', acceptableString);
 }
-
-function adBook(events) {
-    events.preventDefault();
-    const book = {
-        title: document.getElementById('title').value,
-        author: document.getElementById('author').value,
-    };
-    collection.push(book);
-    document.querySelector('form').reset();
-    addItem(book);
-    
-}
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('sub').addEventListener('click', adBook);
-    collection.forEach(addItem);
-});
 
 function addItem(book) {
   const mainList = document.getElementById('main-list');
@@ -43,4 +27,19 @@ function addItem(book) {
   itemContainer.appendChild(listBtn);
   saveLocal();
 }
+
+function adBook(events) {
+    events.preventDefault();
+        const book = {
+        title: document.getElementById('title').value,
+        author: document.getElementById('author').value,
+    };
+    collection.push(book);
+    document.querySelector('form').reset();
+    addItem(book);
+}
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('sub').addEventListener('click', adBook);
+    collection.forEach(addItem);
+});
 /* eslint-enable indent */
