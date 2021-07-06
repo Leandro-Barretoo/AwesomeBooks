@@ -1,5 +1,12 @@
 let collection = JSON.parse(localStorage.getItem('myBookList')) || [];
 
+class saveLocal {
+  static saveList() {
+    const acceptableString = JSON.stringify(collection);
+    localStorage.setItem('myBookList', acceptableString);
+  }
+}
+
 class createBook {
   constructor(title, author) {
     this.title = title
@@ -39,6 +46,17 @@ class displayList {
   }
 }
 
+function addBook(ev){
+  ev.preventDefault();
+  const title = document.getElementById('title').value;
+  const author = document.getElementById('author').value;
+  const book = new createBook(title, author);
+  book.listInsert(book);
+  displayList.create(book);
+  document.querySelector('form').reset();
+  saveLocal.saveList();
+};
+
 class preserve {
   static individualElems() {
     for(let i = 0; i < collection.length; i++) {
@@ -56,4 +74,3 @@ document.addEventListener('DOMContentLoaded', () => {
   preserve.initialBook();
   preserve.individualElems();
 })
-
