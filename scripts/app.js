@@ -1,4 +1,5 @@
 /* eslint-disable max-classes-per-file */
+/* eslint-disable class-methods-use-this */
 
 const collection = JSON.parse(localStorage.getItem('myBookList')) || [];
 
@@ -63,7 +64,7 @@ function addBook(ev) {
 
 class Preserve {
   static individualElems() {
-    for (let i = 0; i < collection.length; i+=1) {
+    for (let i = 0; i < collection.length; i += 1) {
       DisplayList.create(collection[i]);
     }
   }
@@ -79,4 +80,5 @@ document.addEventListener('DOMContentLoaded', () => {
   Preserve.individualElems();
 });
 
+/* eslint-enable class-methods-use-this */
 /* eslint-enable max-classes-per-file */
