@@ -1,27 +1,32 @@
-let collection = [];
+const collection = [];
+
+function saveLocal() {
+  const acceptableString = JSON.stringify(collection);
+  localStorage.setItem('myBookList', acceptableString);
+};
 
 function adBook(events) {
     events.preventDefault();
-    let book = {
+    const book = {
         title: document.getElementById('title').value,
         author: document.getElementById('author').value
     };
     collection.push(book);
     document.querySelector('form').reset();
 
-    let mainList = document.getElementById('main-list');
-    let itemContainer = document.createElement('div');
+    const mainList = document.getElementById('main-list');
+    const itemContainer = document.createElement('div');
     mainList.appendChild(itemContainer);
-    let listItem = document.createElement('p');
-    let itemInfo = document.createTextNode('Title: ' + book['title'] + ' | ' + 'Author: ' + book['author']);
+    const listItem = document.createElement('p');
+    const itemInfo = document.createTextNode('Title: ' + book['title'] + ' | ' + 'Author: ' + book['author']);
     listItem.appendChild(itemInfo);
     itemContainer.appendChild(listItem);
-    let listBtn = document.createElement('button');
+    const listBtn = document.createElement('button');
     listBtn.innerText = 'Remove';
-    listBtn.addEventListener('click', function(event){
-      let button = event.target;
+    listBtn.addEventListener('click', function(event) {
+      const button = event.target;
       button.parentNode.parentNode.removeChild(button.parentNode);
-      let itemIndex = collection.indexOf(book);
+      const itemIndex = collection.indexOf(book);
       collection.splice(itemIndex, 1);
       saveLocal();
     });
@@ -31,8 +36,3 @@ function adBook(events) {
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('sub').addEventListener('click', adBook);
 });
-
-function saveLocal() {
-  let acceptableString = JSON.stringify(collection);
-  localStorage.setItem('myBookList', acceptableString);
-};
