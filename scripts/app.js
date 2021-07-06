@@ -20,12 +20,12 @@ function adBook(events) {
     const itemContainer = document.createElement('div');
     mainList.appendChild(itemContainer);
     const listItem = document.createElement('p');
-    const itemInfo = document.createTextNode('Title: ' + book.title + ' | ' + 'Author: ' + book.author);
+    const itemInfo = document.createTextNode(`Title: ${book.title} | Author: ${book.author}`);
     listItem.appendChild(itemInfo);
     itemContainer.appendChild(listItem);
     const listBtn = document.createElement('button');
     listBtn.innerText = 'Remove';
-    listBtn.addEventListener('click', function(event) {
+    listBtn.addEventListener('click', (event) => {
       const button = event.target;
       button.parentNode.parentNode.removeChild(button.parentNode);
       const itemIndex = collection.indexOf(book);
@@ -35,7 +35,7 @@ function adBook(events) {
     itemContainer.appendChild(listBtn);
     saveLocal();
 }
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded',  () => {
     document.getElementById('sub').addEventListener('click', adBook);
 });
 
