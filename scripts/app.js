@@ -1,4 +1,6 @@
-let collection = JSON.parse(localStorage.getItem('myBookList')) || [];
+/* eslint-disable max-classes-per-file */
+
+const collection = JSON.parse(localStorage.getItem('myBookList')) || [];
 
 class saveLocal {
   static saveList() {
@@ -9,9 +11,10 @@ class saveLocal {
 
 class createBook {
   constructor(title, author) {
-    this.title = title
-    this.author = author
+    this.title = title;
+    this.author = author;
   }
+
   listInsert(value) {
     collection.push(value);
   }
@@ -22,8 +25,9 @@ class removeBtn {
       const button = ev.target;
       button.parentNode.parentNode.removeChild(button.parentNode);
       this.outCollection(value);
-    })
+    });
   }
+
   static outCollection(value) {
     const itemIndex = collection.indexOf(value);
     collection.splice(itemIndex, 1);
@@ -61,11 +65,12 @@ class preserve {
   static individualElems() {
     for(let i = 0; i < collection.length; i++) {
       displayList.create(collection[i]);
-    }
+    };
   }
+
   static initialBook() {
     document.getElementById('sub').addEventListener('click', addBook);
-  }
+  };
 }
 
 const pre = new preserve();
@@ -74,3 +79,5 @@ document.addEventListener('DOMContentLoaded', () => {
   preserve.initialBook();
   preserve.individualElems();
 })
+
+/* eslint-enable max-classes-per-file */
