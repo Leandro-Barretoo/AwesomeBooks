@@ -2,14 +2,14 @@
 
 const collection = JSON.parse(localStorage.getItem('myBookList')) || [];
 
-class saveLocal {
+class SaveLocal {
   static saveList() {
     const acceptableString = JSON.stringify(collection);
     localStorage.setItem('myBookList', acceptableString);
   }
 }
 
-class createBook {
+class CreateBook {
   constructor(title, author) {
     this.title = title;
     this.author = author;
@@ -19,7 +19,7 @@ class createBook {
     collection.push(value);
   }
 }
-class removeBtn {
+class RemoveBtn {
   static deleteBtn(listBtn, value) {
     listBtn.addEventListener('click', (ev) => {
       const button = ev.target;
@@ -31,10 +31,10 @@ class removeBtn {
   static outCollection(value) {
     const itemIndex = collection.indexOf(value);
     collection.splice(itemIndex, 1);
-    saveLocal.saveList();
+    SaveLocal.saveList();
   }
 }
-class displayList {
+class DisplayList {
   static create(value) {
     const mainList = document.getElementById('main-list');
     const itemContainer = document.createElement('div');
@@ -46,38 +46,37 @@ class displayList {
     const listBtn = document.createElement('button');
     listBtn.innerText = 'Remove';
     itemContainer.appendChild(listBtn);
-    removeBtn.deleteBtn(listBtn, value);
+    RemoveBtn.deleteBtn(listBtn, value);
   }
 }
 
-function addBook(ev){
+function addBook(ev) {
   ev.preventDefault();
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
-  const book = new createBook(title, author);
+  const book = new CreateBook(title, author);
   book.listInsert(book);
-  displayList.create(book);
+  DisplayList.create(book);
   document.querySelector('form').reset();
-  saveLocal.saveList();
-};
+  SaveLocal.saveList();
+}
 
-class preserve {
+class Preserve {
   static individualElems() {
-    for(let i = 0; i < collection.length; i++) {
-      displayList.create(collection[i]);
-    };
+    for (let i = 0; i < collection.length; i+=1) {
+      DisplayList.create(collection[i]);
+    }
   }
 
   static initialBook() {
     document.getElementById('sub').addEventListener('click', addBook);
-  };
+  }
 }
 
-const pre = new preserve();
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('sub').addEventListener('click', addBook);
-  preserve.initialBook();
-  preserve.individualElems();
-})
+  Preserve.initialBook();
+  Preserve.individualElems();
+});
 
 /* eslint-enable max-classes-per-file */
