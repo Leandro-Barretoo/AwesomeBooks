@@ -33,6 +33,16 @@ input {
     border: none;
   }
 
+p {
+    display: inline;
+}
+
+.div {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3%;
+  font-weight: 500;
+}
 /* #mainList {
     justify-content: space-between;
 }
