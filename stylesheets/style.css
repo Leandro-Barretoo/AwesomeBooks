@@ -48,3 +48,37 @@ main {
   text-align: center;
   margin: 30px;
 }
+
+form {
+  display: inline-block;
+  border: 1px solid black;
+  text-align: right;
+  margin: auto;
+  padding: 0 20px;
+}
+
+input {
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1.1rem;
+  outline: none;
+  border: none;
+  background-color: #E718D4;
+}
+
+::placeholder {
+  color: white;
+  font-weight: bold;
+  opacity: 1;
+}
+
+#sub {
+  margin: 5px 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #00FF04;
+  border: none;
+}
+
+/* stylelint-enable indentation */
