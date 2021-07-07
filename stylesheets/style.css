@@ -9,7 +9,26 @@ body {
 }
 
 main {
-    text-align: center;
-    width: 50%;
-    margin: auto;
-  }
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+#main-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  margin: 20px;
+}
+
+#main-list {
+  border: 5px solid black;
+}
+
+.book-item {
+  padding: 15px 15px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e718d4;
+}
