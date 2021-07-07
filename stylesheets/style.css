@@ -39,9 +39,10 @@ main {
   padding: 7px;
   font-weight: bold;
   color: white;
-  background-color: #EC111D;
+  background-color: #ec111d;
   border: none;
 }
+
 #second-title {
   font-size: 3rem;
   font-weight: bolder;
@@ -63,7 +64,7 @@ input {
   font-size: 1.1rem;
   outline: none;
   border: none;
-  background-color: #E718D4;
+  background-color: #e718d4;
 }
 
 ::placeholder {
@@ -77,7 +78,7 @@ input {
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 20px;
-  background-color: #00FF04;
+  background-color: #00ff04;
   border: none;
 }
 
