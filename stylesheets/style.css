@@ -1,0 +1,15 @@
+/* stylelint-disable indentation */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap');
+
+body {
+  color: white;
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+  }

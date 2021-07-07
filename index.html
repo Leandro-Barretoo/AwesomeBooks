@@ -5,25 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome Books</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylesheets/reset.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
     <script src="scripts/app.js"></script>
 </head>
 <body>
     <main>
-    <h1>Awesome Books</h1>
+    <h1 id='main-title'>All Awesome Books</h1>
     <div id="main-list">
     </div>
     <div>
-        <br>
-        <form class=".d-flex" action="/index.html">
-            <label for="title">Title:</label><br>
-            <input type="text" id ="title" name="title" placeholder="Tiltle"><br><br>
-            <label for="author">Author:</label><br>
-            <input type="text" id="author" name="author" placeholder="Author"><br><br>
-            <button type="submit" id="sub">Add</button>
-        </form>
+      <h2 id="second-title">Add new book:</h2>
+      <br>
+      <form action="/index.html">
+          <label for="title"></label><br>
+          <input type="text" id ="title" name="title" placeholder="Tiltle"><br><br>
+          <label for="author"></label><br>
+          <input type="text" id="author" name="author" placeholder="Author"><br><br>
+          <button type="submit" id="sub">Add</button>
+      </form>
     </div>
-</main>
+  </main>
 </body>
 </html>
