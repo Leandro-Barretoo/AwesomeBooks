@@ -75,8 +75,14 @@ class Preserve {
   }
 }
 
+function setTimeDate() {
+  let DateTime = luxon.DateTime;
+  const now = DateTime.now().toLocaleString(DateTime.DATETIME_FULL);
+  document.getElementById('date-string').innerHTML = now;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('sub').addEventListener('click', addBook);
+  setTimeDate();
   Preserve.initialBook();
   Preserve.individualElems();
 });
