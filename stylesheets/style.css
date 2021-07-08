@@ -133,3 +133,41 @@ input {
   background-color: #00FF04;
   border: none;
 }
+
+/* Contacts Style*/
+#contact-details {
+  display: none;
+  text-align: center;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.contact-text {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.contact-information {
+  text-align: left;
+  margin-left: 50px;
+}
+
+.contact-information li {
+  padding: 10px;
+}
+
+.information-item {
+  color: #E718D4;
+}
+
+footer.copyright {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
