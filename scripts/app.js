@@ -75,6 +75,27 @@ class Preserve {
   }
 }
 
+function changeToList() {
+  document.getElementById('main-list').style.display = 'block';
+  document.getElementById('second-title').style.display = 'none';
+  document.getElementById('form-field').style.display = 'none';
+  document.getElementById('contact-details').style.display = 'none';
+}
+
+function changeToCreate() {
+  document.getElementById('main-list').style.display = 'none';
+  document.getElementById('second-title').style.display = 'block';
+  document.getElementById('form-field').style.display = 'inline-block';
+  document.getElementById('contact-details').style.display = 'none';
+}
+
+function changeToContact() {
+  document.getElementById('main-list').style.display = 'none';
+  document.getElementById('second-title').style.display = 'none';
+  document.getElementById('form-field').style.display = 'none';
+  document.getElementById('contact-details').style.display = 'block';
+}
+
 function setTimeDate() {
   let DateTime = luxon.DateTime;
   const now = DateTime.now().toLocaleString(DateTime.DATETIME_FULL);
@@ -85,6 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeDate();
   Preserve.initialBook();
   Preserve.individualElems();
+  document.getElementById('list-btn').addEventListener('click', changeToList);
+  document.getElementById('add-new-btn').addEventListener('click', changeToCreate);
+  document.getElementById('contact-btn').addEventListener('click', changeToContact);
 });
 
 /* eslint-enable class-methods-use-this */
