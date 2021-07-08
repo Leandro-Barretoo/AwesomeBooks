@@ -1,7 +1,7 @@
 /* eslint-disable max-classes-per-file */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable no-undef */
-/* eslint-disable prefer-destructuring*/
+/* eslint-disable prefer-destructuring */
 
 const collection = JSON.parse(localStorage.getItem('myBookList')) || [];
 
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('contact-btn').addEventListener('click', changeToContact);
 });
 
-/* eslint-enable prefer-destructuring*/
+/* eslint-enable prefer-destructuring */
 /* eslint-enable no-undef */
 /* eslint-enable class-methods-use-this */
 /* eslint-enable max-classes-per-file */
