@@ -4,7 +4,7 @@
 
 > A simple website that display books.
 
-![screenshot](./app_photo.png)
+![screenshot](./awesome_new.png)
 
 You can add and remove books from the list.
 

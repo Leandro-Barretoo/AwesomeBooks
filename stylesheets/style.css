@@ -2,7 +2,7 @@
 
 body {
   color: white;
-  background-color: black;
+  background-color:  #f6a2c8;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -71,11 +71,6 @@ main {
   font-weight: bolder;
   margin: 20px;
 }
-
-#main-list {
-  border: 5px solid black;
-}
-
 .book-item {
   padding: 15px 15px;
   font-size: 20px;
@@ -91,7 +86,7 @@ main {
   padding: 7px;
   font-weight: bold;
   color: white;
-  background-color: #ec111d;
+  background-color: #ec95de;
   border: none;
 }
 
@@ -105,7 +100,6 @@ main {
 
 form {
   display: none;
-  border: 1px solid black;
   text-align: right;
   margin: auto;
   padding: 0 20px;
@@ -127,11 +121,13 @@ input {
 }
 
 #sub {
+  color: white;
+  font-weight: bold;
   margin: 5px 0;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 20px;
-  background-color: #00ff04;
+  background-color: #67135a;
   border: none;
 }
 
