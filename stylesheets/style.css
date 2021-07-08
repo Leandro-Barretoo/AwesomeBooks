@@ -6,6 +6,59 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/* Navbar style */
+.navigation {
+  margin: 10px 30px;
+}
+
+.links {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+.link-item {
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.part-one {
+  display: flex;
+  align-items: center;
+}
+
+.part-two {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  font-size: 20px;
+  color: #E718D4;
+}
+
+#logo {
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+#separator {
+  width: 70%;
+}
+
+#date-string {
+  text-align: center;
+  color: #E718D4;
+}
+
+/* Main content style */
 main {
   text-align: center;
   width: 50%;
@@ -28,7 +81,8 @@ main {
   font-size: 20px;
   display: flex;
   justify-content: space-between;
-  background-color: #e718d4;
+  background-color: #E718D4;
+  align-items: center;
 }
 
 .book-item button {
@@ -37,19 +91,20 @@ main {
   padding: 7px;
   font-weight: bold;
   color: white;
-  background-color: #ec111d;
+  background-color: #EC111D;
   border: none;
 }
 
 #second-title {
-  font-size: 3rem;
+  display: none;
+  font-size: 2rem;
   font-weight: bolder;
   text-align: center;
   margin: 30px;
 }
 
 form {
-  display: inline-block;
+  display: none;
   border: 1px solid black;
   text-align: right;
   margin: auto;
@@ -62,9 +117,8 @@ input {
   font-size: 1.1rem;
   outline: none;
   border: none;
-  background-color: #e718d4;
+  background-color: #E718D4;
 }
-
 ::placeholder {
   color: white;
   font-weight: bold;
@@ -76,6 +130,6 @@ input {
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 20px;
-  background-color: #00ff04;
+  background-color: #00FF04;
   border: none;
 }
