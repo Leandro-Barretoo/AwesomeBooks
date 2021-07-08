@@ -1,5 +1,6 @@
 /* eslint-disable max-classes-per-file */
 /* eslint-disable class-methods-use-this */
+/* eslint-disable no-undef */
 
 const collection = JSON.parse(localStorage.getItem('myBookList')) || [];
 
@@ -97,7 +98,7 @@ function changeToContact() {
 }
 
 function setTimeDate() {
-  let DateTime = luxon.DateTime;
+  const DateTime = luxon.DateTime;
   const now = DateTime.now().toLocaleString(DateTime.DATETIME_FULL);
   document.getElementById('date-string').innerHTML = now;
 }
@@ -111,5 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('contact-btn').addEventListener('click', changeToContact);
 });
 
+/* eslint-enable no-undef */
 /* eslint-enable class-methods-use-this */
 /* eslint-enable max-classes-per-file */
