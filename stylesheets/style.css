@@ -2,10 +2,63 @@
 
 body {
   color: white;
-  background-color: black;
+  background-color: #f6a2c8;
   font-family: 'Poppins', sans-serif;
 }
 
+/* Navbar style */
+.navigation {
+  margin: 10px 30px;
+}
+
+.links {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+.link-item {
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.part-one {
+  display: flex;
+  align-items: center;
+}
+
+.part-two {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  font-size: 20px;
+  color: #e718d4;
+}
+
+#logo {
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+#separator {
+  width: 70%;
+}
+
+#date-string {
+  text-align: center;
+  color: #e718d4;
+}
+
+/* Main content style */
 main {
   text-align: center;
   width: 50%;
@@ -19,16 +72,13 @@ main {
   margin: 20px;
 }
 
-#main-list {
-  border: 5px solid black;
-}
-
 .book-item {
   padding: 15px 15px;
   font-size: 20px;
   display: flex;
   justify-content: space-between;
   background-color: #e718d4;
+  align-items: center;
 }
 
 .book-item button {
@@ -37,20 +87,20 @@ main {
   padding: 7px;
   font-weight: bold;
   color: white;
-  background-color: #ec111d;
+  background-color: #ec95de;
   border: none;
 }
 
 #second-title {
-  font-size: 3rem;
+  display: none;
+  font-size: 2rem;
   font-weight: bolder;
   text-align: center;
   margin: 30px;
 }
 
 form {
-  display: inline-block;
-  border: 1px solid black;
+  display: none;
   text-align: right;
   margin: auto;
   padding: 0 20px;
@@ -72,10 +122,50 @@ input {
 }
 
 #sub {
+  color: white;
+  font-weight: bold;
   margin: 5px 0;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 20px;
-  background-color: #00ff04;
+  background-color: #67135a;
   border: none;
+}
+
+/* Contacts Style */
+#contact-details {
+  display: none;
+  text-align: center;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.contact-text {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.contact-information {
+  text-align: left;
+  margin-left: 50px;
+}
+
+.contact-information li {
+  padding: 10px;
+}
+
+.information-item {
+  color: #e718d4;
+}
+
+footer.copyright {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
 }

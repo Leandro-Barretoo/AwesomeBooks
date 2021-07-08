@@ -7,19 +7,36 @@
   <title>Awesome Books</title>
   <link rel="stylesheet" href="stylesheets/reset.css">
   <link rel="stylesheet" href="stylesheets/style.css">
+  <script src="scripts/luxon.min.js"></script>
   <script src="scripts/app.js"></script>
 </head>
 <body>
   <header>
-    <h1 id='main-title'>All Awesome Books</h1>
+    <div class="navigation">
+      <nav class="topnav">
+        <ul class="links">
+          <div class="part-one">
+            <li id="logo">Awesome Books</li>
+          </div>
+          <div class="part-two">
+            <li class="link-item"><a href="#" id="list-btn">List</a></li>
+            <li class="link-item"><a href="#" id="add-new-btn">Add new</a></li>
+            <li class="link-item"><a href="#" id="contact-btn">Contact</a></li>
+          </div>
+        </ul>
+      </nav>
+    </div>
+  <hr id="separator"><br><br><br>
+  <p id="date-string"></p>
   </header>
   <main>
   <div id="main-list">
+  <h1 id='main-title'>All Awesome Books</h1>
   </div>
   <div>
     <h2 id="second-title">Add new book:</h2>
     <br>
-      <form action="/index.html">
+      <form id="form-field" action="/index.html">
         <label for="title"></label><br>
         <input type="text" id ="title" name="title" placeholder="Tiltle"><br><br>
         <label for="author"></label><br>
@@ -27,6 +44,23 @@
         <button type="submit" id="sub">Add</button>
       </form>
     </div>
+    <div id="contact-details">
+      <h2 class="contact-title">Contact information</h2>
+      <div class="contact-text">
+        <p>Do have any questions or you just want to say "Hello"</p>
+        <p>You can reach out to us!</p>
+      </div>
+      <div class="contact-information">
+        <ul>
+          <li><span class="information-item">Our e-mail:</span> mail@mail.com</li>
+          <li><span class="information-item">Our phone number:</span> 0012334566678</li>
+          <li><span class="information-item">Our address:</span> Streetname 22, 75849 City, Country</li>
+        </ul>
+      </div>
+    </div>
   </main>
+  <footer class="copyright">
+    <p>Created <strong>by</strong> Leandro Barreto and Luqman Musah. © 2021</p>
+  </footer>
 </body>
 </html>

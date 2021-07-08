@@ -1,5 +1,7 @@
 /* eslint-disable max-classes-per-file */
 /* eslint-disable class-methods-use-this */
+/* eslint-disable no-undef */
+/* eslint-disable prefer-destructuring */
 
 const collection = JSON.parse(localStorage.getItem('myBookList')) || [];
 
@@ -75,11 +77,43 @@ class Preserve {
   }
 }
 
+function changeToList() {
+  document.getElementById('main-list').style.display = 'block';
+  document.getElementById('second-title').style.display = 'none';
+  document.getElementById('form-field').style.display = 'none';
+  document.getElementById('contact-details').style.display = 'none';
+}
+
+function changeToCreate() {
+  document.getElementById('main-list').style.display = 'none';
+  document.getElementById('second-title').style.display = 'block';
+  document.getElementById('form-field').style.display = 'inline-block';
+  document.getElementById('contact-details').style.display = 'none';
+}
+
+function changeToContact() {
+  document.getElementById('main-list').style.display = 'none';
+  document.getElementById('second-title').style.display = 'none';
+  document.getElementById('form-field').style.display = 'none';
+  document.getElementById('contact-details').style.display = 'block';
+}
+
+function setTimeDate() {
+  const DateTime = luxon.DateTime;
+  const now = DateTime.now().toLocaleString(DateTime.DATETIME_FULL);
+  document.getElementById('date-string').innerHTML = now;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('sub').addEventListener('click', addBook);
+  setTimeDate();
   Preserve.initialBook();
   Preserve.individualElems();
+  document.getElementById('list-btn').addEventListener('click', changeToList);
+  document.getElementById('add-new-btn').addEventListener('click', changeToCreate);
+  document.getElementById('contact-btn').addEventListener('click', changeToContact);
 });
 
+/* eslint-enable prefer-destructuring */
+/* eslint-enable no-undef */
 /* eslint-enable class-methods-use-this */
 /* eslint-enable max-classes-per-file */
