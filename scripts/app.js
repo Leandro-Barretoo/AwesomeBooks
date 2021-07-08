@@ -39,9 +39,10 @@ class DisplayList {
   static create(value) {
     const mainList = document.getElementById('main-list');
     const itemContainer = document.createElement('div');
+    itemContainer.setAttribute('class', 'book-item');
     mainList.appendChild(itemContainer);
     const listItem = document.createElement('p');
-    const itemInfo = document.createTextNode(`Title: ${value.title} | Author: ${value.author}`);
+    const itemInfo = document.createTextNode(`Title: ${value.title} by Author: ${value.author}`);
     listItem.appendChild(itemInfo);
     itemContainer.appendChild(listItem);
     const listBtn = document.createElement('button');
