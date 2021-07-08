@@ -2,7 +2,7 @@
 
 body {
   color: white;
-  background-color:  #f6a2c8;
+  background-color: #f6a2c8;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -71,6 +71,7 @@ main {
   font-weight: bolder;
   margin: 20px;
 }
+
 .book-item {
   padding: 15px 15px;
   font-size: 20px;
