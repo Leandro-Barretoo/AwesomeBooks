@@ -41,7 +41,7 @@ a {
 
 a:hover {
   font-size: 20px;
-  color: #E718D4;
+  color: #e718d4;
 }
 
 #logo {
@@ -55,7 +55,7 @@ a:hover {
 
 #date-string {
   text-align: center;
-  color: #E718D4;
+  color: #e718d4;
 }
 
 /* Main content style */
@@ -81,7 +81,7 @@ main {
   font-size: 20px;
   display: flex;
   justify-content: space-between;
-  background-color: #E718D4;
+  background-color: #e718d4;
   align-items: center;
 }
 
@@ -91,7 +91,7 @@ main {
   padding: 7px;
   font-weight: bold;
   color: white;
-  background-color: #EC111D;
+  background-color: #ec111d;
   border: none;
 }
 
@@ -117,8 +117,9 @@ input {
   font-size: 1.1rem;
   outline: none;
   border: none;
-  background-color: #E718D4;
+  background-color: #e718d4;
 }
+
 ::placeholder {
   color: white;
   font-weight: bold;
@@ -130,11 +131,11 @@ input {
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 20px;
-  background-color: #00FF04;
+  background-color: #00ff04;
   border: none;
 }
 
-/* Contacts Style*/
+/*Contacts Style*/
 #contact-details {
   display: none;
   text-align: center;
@@ -163,7 +164,7 @@ input {
 }
 
 .information-item {
-  color: #E718D4;
+  color: #e718d4;
 }
 
 footer.copyright {
